@@ -10,11 +10,11 @@
 ///////////////////////////////////
 
   @mixin gutterWidth($numerator, $denominator) {
-    $percentage: ($numerator / $denominator) * 100;
+    $percentage: percentage($numerator / $denominator);
     $gutterTax: (($denominator - $numerator) / $denominator) * $gutter;
-    $expression: #{$percentage}% - #{$gutterTax};
+    $expression: #{$percentage} - #{$gutterTax};
 
-    width: percentage(($percentage / 100 ) * .84);
+    width: $percentage;
     width: -webkit-calc(#{$expression});
     width: -moz-calc(#{$expression});
     width: calc(#{$expression});
@@ -39,11 +39,10 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin-left: $gutter;
+    padding-left: $gutter;
+    margin-left: calc(#{$gutter});
+    padding-left: calc(0);
     float: left;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
   }
 
   //Remove gutter from first column
