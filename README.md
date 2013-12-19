@@ -1,7 +1,7 @@
 ZedGrid
 =======
 
-A simple, flexible, fluid grid with gutters that *make sense*.
+A simple, fluid grid with flexible gutters.
 
 
 
@@ -36,15 +36,20 @@ To get started all you need to do is include the ZedGrid CSS in your project.
     </div>
  ```
  
+ **Modifying Gutter Width**
+ 
+ Gutter width is controlled by the $gutter variable in the SCSS file. You can also modifying all instnaces of 20px in the css file.
+ 
 Note: adding a class of __"pull-right"__ to your column wrappers will right align your columns.
 
 ---
 
 ###Benefits of ZedGrid:
-1. Column gutters are created using margins and calc() rather than padding. This allows you to **apply padding directly to your column wrappers**, if you so wish.
-2. The "column" class name is spelled out, rather than being abbreviated to something more ambiguous.
-3. Supports every variation of X/X through numbers 1 - 12.
-4. Completely fluid grid.
+1. Completely fluid column sizing.
+1. Column gutters can be either fluid or fixed widths.
+2. Gutters are handled with margins, allowing you to apply padding and border rules to your column containers.
+2. The "column" class name is spelled out, rather than being abbreviated to something ambiguous.
+4. Supports every variation of X/X through numbers 1 - 12.
 
 ---
 
