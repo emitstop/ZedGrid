@@ -41,7 +41,7 @@
     -webkit-box-sizing: border-box;
     padding-left: $gutter;
     margin-left: calc(#{$gutter});
-    padding-left: calc(0);
+    padding-left: calc(0%);
     float: left;
   }
 
