@@ -10,7 +10,7 @@ An intuitive, fluid grid with flexible gutters.
 To get started all you need to do is include the ZedGrid CSS in your project.
 
  ```html
- <link rel="stylesheet" href="zedgrid.css"/>
+ <link rel="stylesheet" href="zedgrid.min.css"/>
  ```
  
 #####Basic Markup Structure
