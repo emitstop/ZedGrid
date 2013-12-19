@@ -55,6 +55,3 @@ Note: adding a class of __"pull-right"__ to your column wrappers will right alig
 * Opera 7+
 * Safari 2.0+
 * Android Browser 2.1+
-
-
-
