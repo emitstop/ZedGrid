@@ -1,7 +1,7 @@
 ZedGrid
 =======
 
-A simple, fluid grid with flexible gutters.
+An intuitive, fluid grid with flexible gutters.
 
 
 
