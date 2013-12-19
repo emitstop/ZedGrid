@@ -2,7 +2,7 @@
 // ZedGrid 1.0.1
 ///////////////////////////////////
 //  Config:
-    $gutter: 20px;
+    $gutter: 20px; //default
 
 
 ///////////////////////////////////
@@ -43,6 +43,9 @@
     margin-left: calc(#{$gutter});
     padding-left: calc(0%);
     float: left;
+    &.pull-right {
+      float: right;
+    }
   }
 
   //Remove gutter from first column
