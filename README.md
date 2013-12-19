@@ -47,16 +47,19 @@ Note: adding a class of __"pull-right"__ to your column wrappers will right alig
 ###Benefits of ZedGrid:
 1. Completely fluid column sizing.
 1. Column gutters can be either fluid or fixed widths.
-2. Gutters are handled with margins, allowing you to apply padding and border rules to your column containers.
+2. Gutters are handled with margins, allowing you to apply padding and border rules to your column containers.*
 2. The "column" class name is spelled out, rather than being abbreviated to something ambiguous.
 4. Supports every variation of X/X through numbers 1 - 12.
 
 ---
 
 ###Browser Support
-* IE8+
+* IE8+*
 * Firefox 2.0+
 * Chrome 4+
 * Opera 7+
 * Safari 2.0+
-* Android Browser 2.1+
+* Android Browser 2.1+*
+
+
+_*Padding and Border rules on columns are not yet supported in IE8 and Android_
