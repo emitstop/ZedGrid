@@ -49,12 +49,12 @@ Note: adding a class of __"pull-right"__ to your column wrappers will right alig
 ---
 
 ###Browser Support
-* IE9+
-* Firefox 4.0+
-* Chrome 19+
-* Opera 15+
-* Safari 6.0+
-* Android Browser 4.4+
+* IE8+
+* Firefox 2.0+
+* Chrome 4+
+* Opera 7+
+* Safari 2.0+
+* Android Browser 2.1+
 
 
 
