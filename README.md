@@ -38,7 +38,7 @@ To get started all you need to do is include the ZedGrid CSS in your project.
  
  **Modifying Gutter Width**
  
- Gutter width is controlled by the $gutter variable in the SCSS file. You can also modifying all instnaces of 20px in the css file.
+ Gutter width is controlled by the $gutter variable in the SCSS file. You can also do this by modifying all instances of '20px' in the compiled css file.
  
 Note: adding a class of __"pull-right"__ to your column wrappers will right align your columns.
 
