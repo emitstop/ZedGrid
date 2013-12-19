@@ -40,7 +40,7 @@ Note: adding a class of __"pull-right"__ to your column wrappers will right alig
 
 ---
 
-###Subjective Benefits of ZedGrid:
+###Benefits of ZedGrid:
 1. Column gutters are created using margins and calc() rather than padding. This allows you to **apply padding directly to your column wrappers**, if you so wish.
 2. The "column" class name is spelled out, rather than being abbreviated to something more ambiguous.
 3. Supports every variation of X/X through numbers 1 - 12.
