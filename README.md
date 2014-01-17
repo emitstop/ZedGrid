@@ -4,7 +4,7 @@ ZedGrid
 An intuitive, fluid grid with flexible gutters.
 
 ###Semantic Edition
-ZedGrid 1.1 adds support for semantically creating css grids through a SASS mixin.
+ZedGrid 1.2 adds support for semantically creating css grids through a SASS mixin.
 
 
 *Semantic Usage*
