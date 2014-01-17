@@ -11,7 +11,7 @@ ZedGrid 1.1 adds support for semantically creating css grids through a SASS mixi
 
   Include the zedGrid mixin and specify a *fraction numerator*, a *fraction denominator* and a *gutter width*. Gutter width values can be specified in any of the browser-supported CSS units.
 
-  ```sass
+  ```scss
   .my-column {
     @include zedGrid(1, 4, 20px);
   }
