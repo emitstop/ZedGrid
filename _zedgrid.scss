@@ -45,15 +45,14 @@
         margin-left: calc(#{$gutter});
 
         // Add padding-based gutters (legacy)
-        padding-left: $gutter;
+        padding: 0 ($gutter / 2);
 
         //Reset padding-based gutters for modern browsers:
-        padding-left: calc(0%);
+        padding: calc(0%);
 
         //Remove gutters if first column in it's parent
         &:first-child {
           margin-left: 0;
-          padding-left: 0;
         }
 
       }
@@ -61,7 +60,7 @@
 
 
 
-  ///////////////////////////////////
+///////////////////////////////////
   //  2. MARKUP EDITION
 
       @mixin columnWidth($numerator, $denominator) {
