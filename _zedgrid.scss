@@ -63,16 +63,19 @@
 ///////////////////////////////////
   //  2. MARKUP EDITION
 
+      //Set markup gutter
+
+      $gutterMarkup: 20px;
+
       @mixin columnWidth($numerator, $denominator) {
         $percentage: percentage($numerator / $denominator);
-        $gutterTax: (($denominator - $numerator) / $denominator) * $gutter;
+        $gutterTax: (($denominator - $numerator) / $denominator) * $gutterMarkup;
         $expression: #{$percentage} - #{$gutterTax};
 
         width: $percentage;
         width: -webkit-calc(#{$expression});
         width: -moz-calc(#{$expression});
         width: calc(#{$expression});
-
       }
 
   ///////////////////////////////////
@@ -92,8 +95,8 @@
           box-sizing: border-box;
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
-          padding-left: $gutter;
-          margin-left: calc(#{$gutter});
+          padding-left: $gutterMarkup;
+          margin-left: calc(#{$gutterMarkup});
           padding-left: calc(0%);
           float: left;
 

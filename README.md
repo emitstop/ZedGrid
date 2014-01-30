@@ -9,7 +9,7 @@ ZedGrid 1.2 adds support for semantically creating css grids through a SASS mixi
 
 **Semantic Usage**
 
-  Include the zedGrid mixin and specify a *fraction numerator*, a *fraction denominator* and a *gutter width*. Gutter width values can be specified in any of the browser-supported CSS units.
+  Include the zedGrid mixin in your SASS project, and specify a **fraction numerator**, a **fraction denominator** and a **gutter width**. Gutter width values can be specified in any of the browser-supported CSS units.
 
   ```scss
   //For example, if you wanted 1/4th size columns with 20px gutters:
@@ -21,7 +21,7 @@ ZedGrid 1.2 adds support for semantically creating css grids through a SASS mixi
 
  **Note**: A clearfix is required on all column containers!
 
-###Usage
+###Markup Usage
 
 To get started all you need to do is include the ZedGrid CSS in your project.
 
@@ -54,7 +54,7 @@ To get started all you need to do is include the ZedGrid CSS in your project.
  
 #####Modifying Gutter Width
  
-Gutter width is controlled by the $gutter variable in the SCSS file. You can also do this by modifying all instances of '20px' in the compiled css file.
+Gutter width is controlled by the $gutter variable in the SCSS file. You will need to recompile the SCSS with your updated gutter width in order to change it.
  
 #####Right align columns
 Adding a class of __"pull-right"__ to your column wrappers will right align your columns.
