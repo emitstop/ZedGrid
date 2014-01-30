@@ -110,6 +110,11 @@
             margin-left: 0;
           }
         }
+
+        //Remove extra bottom margin from final nested grid in a column
+        [class*='column-'] .grid:last-of-type {
+          margin-bottom: 0;
+        }
       }
 
 

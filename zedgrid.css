@@ -18,9 +18,8 @@
 .grid > [class*='column-']:first-child {
   margin-left: 0;
 }
-
-.grid > [class*='column-']:first-child {
-  margin-left: 0;
+.grid [class*='column-'] .grid:last-of-type {
+  margin-bottom: 0;
 }
 
 .column-fill,
