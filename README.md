@@ -4,7 +4,7 @@ ZedGrid
 An intuitive, fluid grid with flexible gutters.
 
 ###Semantic Edition
-ZedGrid 1.2 adds support for semantically creating css grids through a SASS mixin.
+ZedGrid 1.2 adds support for semantically creating css grids through a SASS & LESS mixin.
 
 
 **Semantic Usage**
@@ -54,7 +54,7 @@ To get started all you need to do is include the ZedGrid CSS in your project.
  
 #####Modifying Gutter Width
  
-Gutter width is controlled by the $gutter variable in the SCSS file. You will need to recompile the SCSS with your updated gutter width in order to change it.
+Gutter width is controlled by the $gutter variable in the SCSS/LESS file. You will need to recompile the SCSS/LESS with your updated gutter width in order to change it.
  
 #####Right align columns
 Adding a class of __"pull-right"__ to your column wrappers will right align your columns.
