@@ -1,25 +1,10 @@
 ZedGrid
 =======
 
+[View on github pages](http://emitstop.github.io/ZedGrid/)
+
 An intuitive, fluid grid with flexible gutters.
 
-###Semantic Edition
-ZedGrid 1.2 adds support for semantically creating css grids through a SASS & LESS mixin.
-
-
-**Semantic Usage**
-
-  Include the zedGrid mixin in your SASS project, and specify a **fraction numerator**, a **fraction denominator** and a **gutter width**. Gutter width values can be specified in any of the browser-supported CSS units.
-
-  ```scss
-  //For example, if you wanted 1/4th size columns with 20px gutters:
-  .my-column {
-    @include zedGrid(1, 4, 20px);
-  }
-
- ```
-
- **Note**: A clearfix is required on all column containers!
 
 ###Markup Usage
 
@@ -59,6 +44,27 @@ Gutter width is controlled by the $gutterMarkup variable on line 68 of the SCSS/
 #####Right align columns
 Adding a class of __"pull-right"__ to your column wrappers will right align your columns.
 
+
+---
+
+###Semantic Edition
+ZedGrid 1.2 adds support for semantically creating css grids through a SASS & LESS mixin.
+
+
+**Semantic Usage**
+
+  Include the zedGrid mixin in your SASS project, and specify a **fraction numerator**, a **fraction denominator** and a **gutter width**. Gutter width values can be specified in any of the browser-supported CSS units.
+
+  ```scss
+  //For example, if you wanted 1/4th size columns with 20px gutters:
+  .my-column {
+    @include zedGrid(1, 4, 20px);
+  }
+
+ ```
+
+ **Note**: A clearfix is required on all column containers!
+ 
 ---
 
 ###Benefits of ZedGrid:
