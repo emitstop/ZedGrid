@@ -4,380 +4,322 @@
     <meta charset="UTF-8">
     <title>ZedGrid Example Markup</title>
     <link rel="stylesheet" href="../zedgrid.css"/>
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
+    <![endif]-->
+
     <style>
         body {
-            padding: 100px;
             font-family: Helvetica, Arial, Sans-serif;
-            font-size: 12px;
+            background: #ededed;
+            color: #444;
+            font-size: 20px;
+            line-height: 1.6em;
         }
+
+        h1 {
+          text-align: center;
+          font-size: 2.6em;
+        }
+
+        small {
+          display: block;
+          text-align: center;
+        }
+
+
+        section {
+          width: 600px;
+          margin: 0 auto;
+        }
+
+        section.fluid {
+          width: 80%;
+        }
+
+        pre {
+          background: #CCC;
+          background: rgba(0,0,0,.1);
+          line-height: 1em;
+        }
+
         .grid {
             margin-bottom: 20px;
         }
-        [class*="column"] {
+
+        section:not(.ie8) [class*="column"] {
             padding: 10px 0;
             background: #777;
             color: white;
             text-align: center;
             text-transform: uppercase;
+          font-size: 15px;
         }
-        [class*="column"] .grid [class*="column"] {
+
+        .ie8-content-wrap {
+          padding: 10px 0;
+          background: #777;
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 15px;
+        }
+        section:not(.ie8) [class*="column"] .grid [class*="column"] {
+          background: #555;
           background: rgba(0,0,0,.3);
         }
+
+        section {
+          margin-bottom: 120px;;
+        }
+
+        .ie8 {
+
+        }
+
     </style>
 </head>
 <body>
+<section>
+  <h1>ZedGrid Example File</h1>
+</section>
+<section class="setup">
+  <h2>Getting started</h2>
 
-<h1>ZedGrid Example File</h1>
+  <p>
+    To set up ZedGrid, wrap a <strong>.column-x-y</strong> within a <strong>.grid</strong> container. Fraction X and Y values can be any integer from 1-12.
+  </p>
 
-<!-- Half columns -->
+  <h3>Demo:</h3>
+
+  <div style="width: 600px; margin: 0 auto;">
 
     <div class="grid">
-
-        <div class="column-1-2">
-            1 / 2
-        </div>
-        <div class="column-1-2">
-            1 / 2
-        </div>
-
+      <div class="column-1-2">
+        .column-1-2
+      </div>
+      <div class="column-1-4">
+        .column-1-4
+      </div>
+      <div class="column-1-4">
+        .column-1-4
+      </div>
     </div>
 
-<!-- Thirds and Sixths -->
+  </div>
 
-    <div class="grid">
+  <h3>Code:</h3>
 
+  <pre>
+    <code>
+      &lt;div class=&quot;grid&quot;&gt; <br/>
+      &nbsp;&nbsp;&nbsp;&lt;div class=&quot;column-1-2&quot;&gt;<br/>
+      &nbsp;&nbsp;&nbsp;.column-1-2<br/>
+      &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&lt;div class=&quot;column-1-4&quot;&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.column-1-4<br/>
+      &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&lt;div class=&quot;column-1-4&quot;&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.column-1-4<br/>
+      &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+      &lt;/div&gt;</code>
+  </pre>
+
+</section>
+
+
+
+<section class="fluid">
+
+
+
+  <h2>
+    Fluid Grid
+  </h2>
+
+  <p>
+    This grid uses the same markup, but its parent container doesn't have a fixed width. Try resizing your browser window!
+  </p>
+
+  <h3>Example:</h3>
+
+  <div class="grid">
+    <div class="column-1-2">
+      .column-1-2
+    </div>
+    <div class="column-1-4">
+      .column-1-4
+    </div>
+    <div class="column-1-4">
+      .column-1-4
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<section class="nested">
+
+  <h2>Nested Grid</h2>
+
+  <p>
+    Drop in addition grid containers within your columns to enable gridception mode.
+  </p>
+
+  <h3>Demo:</h3>
+
+  <div class="grid">
+
+    <div class="column-1-3">
+      <div class="grid">
         <div class="column-1-3">
-           <div class="grid">
-             <div class="column-1-3">
-               Nested 1/3
-             </div>
-             <div class="column-1-3">
-               Nested 1/3
-             </div>
-             <div class="column-1-3">
-               Nested 1/3
-             </div>
-           </div>
+          1/3
         </div>
-
-        <div class="column-1-6">
-          <div class="grid">
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-          </div>
-        </div>
-
-        <div class="column-1-6">
-          <div class="grid">
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-          </div>
-        </div>
-
         <div class="column-1-3">
-          <div class="grid">
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-            <div class="column-1-3">
-              Nested 1/3
-            </div>
-          </div>
+          1/3
         </div>
-
+        <div class="column-1-3">
+          1/3
+        </div>
+      </div>
     </div>
 
-<!-- Fourths and Eighths: -->
-
-    <div class="grid">
-
-        <div class="column-1-4">
-            1 / 4
-        </div>
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
-        <div class="column-1-4">
-            1 / 4
-        </div>
-
+    <div class="column-1-3">
+      <div class="grid">
+        <div class="column-1-2">1/2</div>
+        <div class="column-1-2">1/2</div>
+      </div>
     </div>
 
-<!-- Fifths and Tenths -->
-
-    <div class="grid">
-
-        <div class="column-1-5">
-            1 / 5
+    <div class="column-1-3">
+      <div class="grid">
+        <div class="column-1-3">
+          1/3
         </div>
-
-        <div class="column-1-10">
-            1 / 10
+        <div class="column-1-3">
+          1/3
         </div>
-
-        <div class="column-1-10">
-            1 / 10
+        <div class="column-1-3">
+          1/3
         </div>
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-        <div class="column-1-5">
-            1 / 5
-        </div>
-
+      </div>
     </div>
 
-<!-- Sixths and Twelfths -->
+  </div>
 
-    <div class="grid">
+  <h3>Code:</h3>
+  <pre>
+    <code>
+      &#x3C;div class=&#x22;grid&#x22;&#x3E;
 
-        <div class="column-1-6">
-            1 / 6
-        </div>
+      &nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;grid&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;/div&#x3E;
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+      &nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;grid&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-2&#x22;&#x3E;1/2&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-2&#x22;&#x3E;1/2&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;/div&#x3E;
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+      &nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;grid&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-1-3&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/3
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;/div&#x3E;
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+      &#x3C;/div&#x3E;
+    </code>
+  </pre>
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+</section>
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+<section class="ie8">
+  <h2>Internet Explorer 8</h2>
+  <p>
+    ZedGrid supports fluid columns and sizing down to IE8, though it will need to be handled a little bit differently in your markup & CSS. In IE8 the gutters are padding-based and which means if you'd like to add padding, border, or background rules to your columns you'll need to add an additional wrapper inside of them.
+  </p>
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
+  <p>
+    This is the only section which was handled in this way, and so it is the only section which is styled in IE8.
+  </p>
 
-        <div class="column-1-12">
-            1 / 12
-        </div>
-
-        <div class="column-1-12">
-            1 / 12
-        </div>
-
-        <div class="column-1-6">
-            1 / 6
-        </div>
-
+  <div class="grid">
+    <div class="column-1-5">
+      <div class="ie8-content-wrap">
+        .column-1-5
+      </div>
     </div>
-
-<!-- Sevenths -->
-
-    <div class="grid">
-
-        <div class="column-1-7">
-            1 / 7
-        </div>
-
-        <div class="column-2-7">
-            2 / 7
-        </div>
-
-        <div class="column-1-7">
-            1 / 7
-        </div>
-
-        <div class="column-2-7">
-            2 / 7
-        </div>
-
-        <div class="column-1-7">
-            1 / 7
-        </div>
-
+    <div class="column-3-5">
+      <div class="ie8-content-wrap">
+        .column-3-5
+      </div>
     </div>
-
-<!-- Eighths -->
-
-    <div class="grid">
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
-        <div class="column-2-8">
-            2 / 8
-        </div>
-
-        <div class="column-2-8">
-            2 / 8
-        </div>
-
-
-        <div class="column-2-8">
-            2 / 8
-        </div>
-
-        <div class="column-1-8">
-            1 / 8
-        </div>
-
+    <div class="column-1-5">
+      <div class="ie8-content-wrap">
+        .column-1-5
+      </div>
     </div>
+  </div>
 
-<!-- Ninths: -->
 
-    <div class="grid">
+  <h3>
+    Code:
+  </h3>
 
-        <div class="column-1-9">
-            1 / 9
-        </div>
+  <pre>
+    <code>
+      &#x3C;div class=&#x22;grid&#x22;&#x3E;
+      &nbsp;&nbsp;&#x3C;div class=&#x22;column-1-5&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;ie8-content-wrap&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.column-1-5
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;column-3-5&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;ie8-content-wrap&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.column-3-5
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;div class=&#x22;column-1-5&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;div class=&#x22;ie8-content-wrap&#x22;&#x3E;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.column-1-5
+      &nbsp;&nbsp;&nbsp;&nbsp;&#x3C;/div&#x3E;
+      &nbsp;&nbsp;&#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    </code>
+  </pre>
 
-        <div class="column-2-9">
-            2 / 9
-        </div>
 
-        <div class="column-3-9">
-            3 / 9
-        </div>
+</section>
 
-        <div class="column-2-9">
-            2 / 9
-        </div>
 
-        <div class="column-1-9">
-            1 / 9
-        </div>
+<footer>
+  <small>
+    Written By <a href="http://zakgroner.com">Zak Groner</a>. ZedGrid is public domain.
+  </small>
+</footer>
 
-    </div>
-
-<!-- Tenths: -->
-
-    <div class="grid">
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-        <div class="column-2-10">
-            2 / 10
-        </div>
-
-        <div class="column-4-10">
-            4 / 10
-        </div>
-
-        <div class="column-2-10">
-            2 / 10
-        </div>
-
-        <div class="column-1-10">
-            1 / 10
-        </div>
-
-    </div>
-
-<!-- Elevenths -->
-
-    <div class="grid">
-
-        <div class="column-1-11">
-            1 / 11
-        </div>
-
-        <div class="column-2-11">
-            2 / 11
-        </div>
-
-        <div class="column-5-11">
-            5 / 11
-        </div>
-
-        <div class="column-2-11">
-            2 / 10
-        </div>
-
-        <div class="column-1-11">
-            1 / 11
-        </div>
-
-    </div>
-
-<!-- You get the idea... -->
-
-    <div class="grid">
-
-        <div class="column-1-12">
-            1 / 12
-        </div>
-
-        <div class="column-2-12">
-            2 / 12
-        </div>
-
-        <div class="column-3-12">
-            3 / 12
-        </div>
-
-        <div class="column-3-12">
-            3 / 12
-        </div>
-
-        <div class="column-2-12">
-            2 / 12
-        </div>
-
-        <div class="column-1-12">
-            1 / 12
-        </div>
-
-    </div>
 
 </body>
 </html>
